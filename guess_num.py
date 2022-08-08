@@ -1,12 +1,16 @@
 import random
 r = random.randint(1, 100)
+count = 0
 while True:
-	guess = input("請輸入數字")
+	count += 1
+	guess = input('請輸入數字:')
 	guess = int(guess)
 	if guess == r:
-		print ("你猜對了")
+		print('恭喜你猜對了')
+		print('這是你猜的第', count, '次')
 		break
 	elif guess > r :
-		print("你猜錯大")
+		print('比答案大')
 	elif guess < r:
-		print("比答案小")
+		print('比答案小')
+	print('這是你猜的第', count, '次')
